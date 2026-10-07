@@ -91,31 +91,18 @@ tbody tr{cursor:pointer;transition:.15s}tbody tr:hover{background:#fff5f5}
 .safety-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 18px}.safety{background:#171717;color:#fff;border-radius:14px;padding:15px 17px;position:relative;overflow:hidden}.safety strong{font-size:16px}.safety small{display:block;color:#d8d8d8;margin-top:5px;line-height:1.35}.safety:before{content:"";position:absolute;width:7px;left:0;top:0;bottom:0;background:var(--red)}
 
 
-/* AMNS Values animated side rail */
-.values-rail{position:fixed;right:14px;top:310px;width:225px;padding:13px;z-index:15;border:1px solid rgba(255,255,255,.55);
- background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(248,248,248,.91));border-radius:18px;box-shadow:0 16px 45px rgba(0,0,0,.16);
- backdrop-filter:blur(10px);overflow:hidden}
-.values-rail:before{content:"";position:absolute;inset:-80px -120px auto auto;width:190px;height:190px;background:radial-gradient(circle,#d7192028,transparent 68%);animation:valueGlow 5s ease-in-out infinite}
-@keyframes valueGlow{50%{transform:scale(1.18);opacity:.55}}
-.values-head{position:relative;display:flex;align-items:center;gap:10px;padding:4px 4px 12px;border-bottom:1px solid #ddd}
-.values-head b{display:block;font-size:13px;letter-spacing:1.3px;color:#8e1117}.values-head small{display:block;margin-top:2px;color:#777;font-weight:700}
-.values-icon{display:grid;place-items:center;width:35px;height:35px;border-radius:11px;background:linear-gradient(135deg,#a90d15,#ed3037);color:#fff;font-size:19px;box-shadow:0 7px 16px #d7192038;animation:valueSpin 4s linear infinite}
-@keyframes valueSpin{50%{transform:rotate(12deg) scale(1.04)}}
-.value-card{position:relative;display:grid;grid-template-columns:28px 1fr 16px;align-items:center;gap:7px;margin-top:8px;padding:10px 8px;border-radius:11px;background:#fff;border:1px solid #e8e8e8;box-shadow:0 4px 12px #0000000a;animation:valueFloat 4s ease-in-out infinite;transition:.25s}
-.value-card:nth-of-type(3){animation-delay:.25s}.value-card:nth-of-type(4){animation-delay:.5s}.value-card:nth-of-type(5){animation-delay:.75s}.value-card:nth-of-type(6){animation-delay:1s}
-@keyframes valueFloat{50%{transform:translateX(-3px)}}
-.value-card:hover{transform:translateX(-5px) scale(1.015);border-color:#e3a0a4;box-shadow:0 8px 20px #d7192020}
-.value-card span{font-size:10px;font-weight:900;color:#d71920}.value-card b{font-size:12px;line-height:1.15}.value-card i{font-style:normal;color:#b3151b;font-weight:900;animation:arrowPulse 1.8s infinite}
-@keyframes arrowPulse{50%{transform:translate(2px,-2px);opacity:.55}}
-.values-line{position:absolute;left:0;top:0;width:3px;height:45%;background:linear-gradient(#d71920,transparent);animation:railMove 3s ease-in-out infinite}
-@keyframes railMove{50%{top:55%;height:25%}}
-@media(min-width:1500px){.container{padding-right:255px}}
-@media(max-width:1499px){.values-rail{right:8px;width:195px;top:300px}.values-rail .value-card{padding:8px 6px}.values-rail .value-card b{font-size:11px}}
-@media(max-width:1100px){.values-rail{position:relative;right:auto;top:auto;width:auto;margin:0 0 18px;border-radius:15px;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.values-head{grid-column:1/-1}.value-card{margin:0}.values-line{display:none}}
-@media(max-width:700px){.values-rail{grid-template-columns:1fr 1fr}.values-head{grid-column:1/-1}.value-card:last-of-type{grid-column:1/-1}}
-
-@media(max-width:1100px){.cards{grid-template-columns:repeat(3,1fr)}.toolbar{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}.hero-safety{opacity:.35}.safety-strip{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:700px){.header{min-height:330px}.brandrow{align-items:flex-start}.logo{width:170px}.titleblock h1{font-size:32px}.hero-safety{display:none}.cards{grid-template-columns:1fr 1fr}.toolbar{grid-template-columns:1fr}.safety-strip{grid-template-columns:1fr}.detailgrid{grid-template-columns:1fr}.doc-actions{display:grid;grid-template-columns:1fr}.doc-btn{width:100%}.barrow{grid-template-columns:105px 1fr 45px}.container{padding:14px}.card{min-height:105px;padding:15px}.card .num{font-size:30px}}
+/* AM/NS India values showcase */
+.values-showcase{margin:0 auto 22px;background:#fff;border:1px solid #ececec;box-shadow:0 14px 36px rgba(20,20,20,.08);overflow:hidden}
+.values-title{padding:22px clamp(18px,3vw,42px) 16px;display:flex;align-items:flex-end;justify-content:space-between;gap:18px;background:linear-gradient(180deg,#fff,#fafafa)}
+.values-title h2{margin:0;font-size:clamp(26px,3vw,42px);letter-spacing:-1px}.values-title p{margin:5px 0 0;font-size:13px;letter-spacing:3px;font-weight:900;color:#111;text-transform:uppercase}.values-title .brandmark{color:var(--red);font-weight:900;letter-spacing:1px}
+.values-grid{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #eee}
+.value-card{min-height:245px;padding:14px 14px 20px;position:relative;border-right:1px solid #eee;background:#fff;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}.value-card:last-child{border-right:0}.value-card:before{content:"";position:absolute;left:0;right:0;bottom:0;height:7px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}.value-card:hover{transform:translateY(-5px);box-shadow:0 12px 28px rgba(215,25,32,.12);z-index:2}.value-card:hover:before{transform:scaleX(1)}
+.value-art{height:150px;display:flex;align-items:center;justify-content:center;color:var(--red);position:relative}.value-art svg{width:100%;height:145px;max-width:210px;overflow:visible}.value-art .line{fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}.value-art .solid{fill:currentColor;stroke:none}.value-art .soft{fill:currentColor;opacity:.12;stroke:none}.value-card:nth-child(2) .value-art{animation:valueBob 4s ease-in-out infinite}.value-card:nth-child(3) .value-art{animation:valueBob 4s .5s ease-in-out infinite}.value-card:nth-child(4) .value-art{animation:valueBob 4s 1s ease-in-out infinite}.value-card:nth-child(5) .value-art{animation:valueBob 4s 1.5s ease-in-out infinite}@keyframes valueBob{50%{transform:translateY(-4px)}}
+.value-index{font-size:11px;font-weight:900;color:#999;letter-spacing:2px}.value-name{margin-top:4px;font-size:clamp(15px,1.35vw,20px);line-height:1.05;font-weight:900;text-transform:uppercase;letter-spacing:1.3px}.value-name span{display:block;color:#111}.value-name strong{display:block;color:var(--red)}.value-shine{position:absolute;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,#d7192012,transparent 68%);right:-50px;top:-50px;animation:shine 5s ease-in-out infinite}@keyframes shine{50%{transform:scale(1.25);opacity:.5}}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;padding:14px 20px 0}.tab{border:1px solid #d3d3d3;background:#fff;padding:9px 12px;border-radius:9px;cursor:pointer;font-weight:800;font-size:14px;transition:.18s;display:inline-flex;align-items:center;gap:7px}.tab .tab-count{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 5px;border-radius:99px;background:#f2f2f2;color:#555;font-size:11px}.tab.active{background:var(--red);border-color:var(--red);color:#fff;box-shadow:0 5px 14px #d7192030}.tab.active .tab-count{background:#fff;color:var(--red)}.tab:focus-visible{outline:3px solid #d7192050;outline-offset:2px}.entry-empty{padding:35px;text-align:center;color:#777}.entrytable tbody tr{cursor:default}
+@media(max-width:1100px){.values-grid{grid-template-columns:repeat(3,1fr)}.value-card:nth-child(3){border-right:0}.value-card:nth-child(4),.value-card:nth-child(5){border-top:1px solid #eee}.values-title{align-items:flex-start;flex-direction:column}.cards{grid-template-columns:repeat(3,1fr)}.toolbar{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}.hero-safety{opacity:.35}.safety-strip{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){body{font-size:14px}.header{min-height:330px}.brandrow{align-items:flex-start;gap:12px}.logo{width:145px}.titleblock h1{font-size:30px;line-height:1.02}.titleblock p{font-size:13px}.slogan span{font-size:11px;padding:7px 10px}.hero-safety{display:none}.values-showcase{border-radius:14px}.values-title{padding:18px}.values-grid{grid-template-columns:1fr 1fr}.value-card{min-height:215px;padding:10px}.value-card:nth-child(2){border-right:0}.value-card:nth-child(3){border-right:1px solid #eee}.value-card:nth-child(4){border-right:0}.value-art{height:125px}.value-art svg{height:120px}.value-name{font-size:14px;letter-spacing:1px}.toolbar{grid-template-columns:1fr}.safety-strip{grid-template-columns:1fr}.detailgrid{grid-template-columns:1fr}.doc-actions{display:grid;grid-template-columns:1fr}.doc-btn{width:100%}.barrow{grid-template-columns:105px 1fr 45px}.container{padding:14px}.card{min-height:105px;padding:15px}.card .num{font-size:30px}.tabs{padding:12px 14px 0}.tab{flex:1 1 calc(50% - 8px);justify-content:center}.register-head{padding:16px}.register-head h2{font-size:19px}}
+@media(max-width:430px){.values-grid{grid-template-columns:1fr}.value-card,.value-card:nth-child(3),.value-card:nth-child(4),.value-card:nth-child(5){border-right:0;border-top:1px solid #eee}.value-card:first-child{border-top:0}.value-art{height:135px}.value-art svg{height:130px}.cards{grid-template-columns:1fr 1fr}.card .label{font-size:11px}.pagination{width:100%}.pagination select{flex:1}}
 </style>
 </head>
 <body>
@@ -141,15 +128,16 @@ tbody tr{cursor:pointer;transition:.15s}tbody tr:hover{background:#fff5f5}
   </div>
 </header>
 
-<aside class="values-rail" aria-label="AMNS Values">
-  <div class="values-head"><span class="values-icon">✦</span><div><b>AMNS VALUES</b><small>How we work</small></div></div>
-  <div class="value-card"><span>01</span><b>Forever dynamic</b><i>↗</i></div>
-  <div class="value-card"><span>02</span><b>Always collaborative</b><i>↗</i></div>
-  <div class="value-card"><span>03</span><b>Consistently excellent</b><i>↗</i></div>
-  <div class="value-card"><span>04</span><b>Endless creative</b><i>↗</i></div>
-  <div class="value-card"><span>05</span><b>Interdependently safe</b><i>↗</i></div>
-  <div class="values-line"></div>
-</aside>
+<section class="values-showcase" aria-label="AM/NS India Values">
+  <div class="values-title"><div><h2>Our Values</h2><p>INTERDEPENDENTLY SAFE</p></div><div class="brandmark">AM/NS INDIA</div></div>
+  <div class="values-grid">
+    <article class="value-card"><div class="value-shine"></div><div class="value-art"><svg viewBox="0 0 220 145" aria-hidden="true"><circle class="soft" cx="110" cy="72" r="55"/><circle class="line" cx="109" cy="35" r="10"/><path class="line" d="M109 46v45M109 58l-27 17M109 58l29 18M109 90l-18 30M109 90l23 29M82 75l-14 22M138 76l15 18"/><path class="line" d="M61 119c18-7 33-5 49 2M110 121c17-8 31-8 49-1"/></svg></div><div class="value-index">01</div><div class="value-name"><span>Forever</span><strong>Dynamic</strong></div></article>
+    <article class="value-card"><div class="value-shine"></div><div class="value-art"><svg viewBox="0 0 220 145" aria-hidden="true"><circle class="soft" cx="110" cy="72" r="55"/><circle class="line" cx="110" cy="31" r="9"/><path class="line" d="M110 41l-8 47 30 21M104 48l-34 16 23 22M102 88l-21 33M132 108l20 22M72 64l-20 12 11 10M91 85l-18 16"/><path class="line" d="M52 76l-7-8M52 76l7-7M155 53c12 7 18 17 18 30M173 83l-8-5M173 83l1-9"/></svg></div><div class="value-index">02</div><div class="value-name"><span>Always</span><strong>Collaborative</strong></div></article>
+    <article class="value-card"><div class="value-shine"></div><div class="value-art"><svg viewBox="0 0 220 145" aria-hidden="true"><circle class="soft" cx="110" cy="72" r="55"/><circle class="line" cx="111" cy="35" r="10"/><path class="line" d="M111 46l-5 43M106 54l-31 14M107 58l28 17M106 89l-17 30M106 89l25 29M75 68c-12 8-19 19-21 32M135 75c10 8 16 18 17 30M53 99l8-5M53 99l-3-8M152 105l-8-5M152 105l4-8M74 122c23-8 40-8 64 0"/></svg></div><div class="value-index">03</div><div class="value-name"><span>Consistently</span><strong>Excellent</strong></div></article>
+    <article class="value-card"><div class="value-shine"></div><div class="value-art"><svg viewBox="0 0 220 145" aria-hidden="true"><circle class="soft" cx="110" cy="72" r="55"/><circle class="line" cx="107" cy="38" r="10"/><path class="line" d="M107 49l-5 42 27 22M101 57L75 71l22 17M102 91l-18 28M129 113l21 13M74 70l-17-11M74 70l-5-15M150 46l-7-10M150 46l11-3M157 35l-8-5M53 116c14-12 28-13 43-5M145 120c11-13 25-15 38-7"/></svg></div><div class="value-index">04</div><div class="value-name"><span>Endless</span><strong>Creative</strong></div></article>
+    <article class="value-card"><div class="value-shine"></div><div class="value-art"><svg viewBox="0 0 220 145" aria-hidden="true"><circle class="soft" cx="110" cy="72" r="55"/><circle class="line" cx="111" cy="34" r="10"/><path class="line" d="M111 45l-7 44 28 22M104 55L80 73l17 17M105 88l-20 30M132 111l23 17M79 72c-17 2-27 12-31 27M151 66c14 4 23 14 28 28M45 99l9-5M45 99l-2-9M179 96l-9-4M179 96l2-9M74 121c12-5 25-4 37 1M110 122c14-7 29-6 43 1M78 47l-7-10M143 48l7-11"/></svg></div><div class="value-index">05</div><div class="value-name"><span>Interdependently</span><strong>Safe</strong></div></article>
+  </div>
+</section>
 
 <main class="container">
   <section class="safety-strip">
@@ -244,7 +232,7 @@ function renderLocations(){
 function renderEntries(){
  const key=Object.keys(DATA.entries||{}).find(k=>canon(k)===canon(currentDept));
  const all=(key?DATA.entries[key]:[]), start=(entryPage-1)*entrySize, rows=all.slice(start,start+entrySize);
- $("entryBody").innerHTML=rows.map(x=>`<tr><td>${esc(x.department)}</td><td>${esc(x.sr)}</td><td><b>${esc(x.id)}</b></td><td>${esc(x.description)}</td><td>${esc(x.area)}</td><td>${esc(x.location)}</td><td><span class="badge ${x.gha==="GHA"?"red":"green"}">${x.gha==="NGH"?"NGHA":esc(x.gha)}</span></td><td>${esc(x.zone)}</td><td>${esc(x.size)}</td></tr>`).join("")||`<tr><td colspan="9" style="text-align:center;padding:35px;color:#777">No entry records.</td></tr>`;
+ $("entryBody").innerHTML=rows.map(x=>`<tr><td><span class="badge red">${esc(x.department)}</span></td><td>${esc(x.sr)}</td><td><b>${esc(x.id)}</b></td><td>${esc(x.description)}</td><td>${esc(x.area)}</td><td>${esc(x.location)}</td><td><span class="badge ${x.gha==="GHA"?"red":"green"}">${x.gha==="NGH"?"NGHA":esc(x.gha)}</span></td><td>${esc(x.zone)||"—"}</td><td>${esc(x.size)||"—"}</td></tr>`).join("")||`<tr><td colspan="9" class="entry-empty">No entry records available for ${esc(currentDept)}.</td></tr>`;
  pager("entryPager",all.length,entrySize,entryPage,"setEntrySize","setEntryPage");
 }
 function renderDashboard(){
@@ -255,10 +243,11 @@ function renderDashboard(){
  const sec=Object.entries(DATA.sections).sort((a,b)=>b[1]-a[1]), max=Math.max(...sec.map(x=>x[1]),1);
  $("sectionBars").innerHTML=sec.map(([k,v])=>`<div class="barrow"><b>${esc(k)}</b><div class="bar"><div class="fill" style="width:${v/max*100}%"></div></div><strong>${v}</strong></div>`).join("");
  $("dept").innerHTML=`<option value="">All departments / sections</option>`+DATA.departments.map(x=>`<option>${esc(x)}</option>`).join("");
- $("tabs").innerHTML=DATA.departments.map((x,i)=>`<button class="tab ${i===0?"active":""}" onclick="selectDept(${JSON.stringify(x)},this)">${esc(x)}</button>`).join("");
+ $("tabs").innerHTML=DATA.departments.map((x,i)=>`<button type="button" class="tab ${i===0?"active":""}" data-dept="${esc(x)}"><span>${esc(x)}</span><span class="tab-count">${(DATA.entries[x]||[]).length}</span></button>`).join("");
+ document.querySelectorAll(".tab").forEach(btn=>btn.addEventListener("click",()=>selectDept(btn.dataset.dept,btn)));
  currentDept=DATA.departments[0]||""; renderLocations();renderEntries();
 }
-window.selectDept=(dep,el)=>{currentDept=dep;entryPage=1;document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));el.classList.add("active");renderEntries()};
+window.selectDept=(dep,el)=>{currentDept=dep;entryPage=1;document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t===el));renderEntries();document.querySelector(".entrytable")?.closest(".register")?.scrollIntoView({behavior:"smooth",block:"start"})};
 window.openLoc=i=>{
  const x=DATA.locations[i]; if(!x)return;
  $("modalTitle").textContent=`${x.id} — ${x.description}`;

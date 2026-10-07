@@ -1,27 +1,22 @@
-# AM/NS Confined Space Dashboard
-
-Upload the contents of this package to the root of your GitHub repository.
+AM/NS India - Confined Space Dashboard
+======================================
 
 Files:
-- `index.html` — dashboard
-- `amns-logo.png` — AM/NS logo
-- `Updated CS Identification all.xlsx` — source workbook
-- `data.json` — generated dashboard dataset
-- `tools/generate_data.py` — Excel-to-JSON converter
-- `.github/workflows/update-data.yml` — automatically regenerates `data.json` when the Excel file changes
+- index.html — responsive dashboard UI
+- data.json — generated dashboard dataset
+- Updated CS Identification all.xlsx — source workbook
+- tools/generate_data.py — GitHub Actions data generator
+- amns-logo.png — AM/NS India logo
 
-## Updating Excel
-Replace `Updated CS Identification all.xlsx` with the new workbook using the same filename and commit it. GitHub Actions will regenerate `data.json`.
+Entry register data:
+- CRM: 5
+- PICKLING: 7
+- ARP: 15
+- CGL: 36
+- CCL: 56
+- UTILITY: 12
+- ADMIN: 41
 
-## SOP / HIRAC links
-Open `index.html` and find `DOCUMENT_LINKS`.
-You can set:
-- `defaultSOP`
-- `defaultHIRAC`
-or individual links under `records` keyed by Identification No.
+The CRM C.S.ENTRY worksheet contains CRM, PICKLING and ARP records. The generator splits those records into their correct department tabs using the identification number/content, so the dashboard does not incorrectly show all 27 records as CRM.
 
-Examples:
-`defaultSOP: "docs/confined-space-sop.pdf"`
-`defaultHIRAC: "docs/confined-space-hirac.pdf"`
-
-The dashboard has no file-upload control for viewers.
+The UI includes the AM/NS India Our Values showcase, responsive layouts for desktop/tablet/mobile, working department entry tabs, and search/department/GHA filters.
