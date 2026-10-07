@@ -29,7 +29,7 @@ button{cursor:pointer}
 .titleblock p{font-size:clamp(16px,1.4vw,21px);margin:8px 0 0;font-weight:700;opacity:.94}
 .slogan{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap}
 .slogan span{padding:9px 14px;border:1px solid #ffffff55;background:#ffffff14;border-radius:999px;font-weight:800;font-size:14px;backdrop-filter:blur(4px)}
-.hero-safety{position:absolute;right:4vw;bottom:16px;width:min(470px,34vw);height:150px;z-index:1;pointer-events:none}
+.hero-safety{position:absolute;right:4vw;bottom:16px;width:min(560px,40vw);height:175px;z-index:1;pointer-events:none}.hero-safety:after{content:"ATMOSPHERE • ENTRY • RESCUE";position:absolute;right:0;bottom:0;font-size:11px;font-weight:900;letter-spacing:2px;color:#fff8;animation:blink 2.5s infinite}@keyframes blink{50%{opacity:.45}}
 .tank{position:absolute;right:8%;bottom:15px;width:190px;height:92px;border:5px solid #fff;border-radius:18px 18px 12px 12px;background:#ffffff12;box-shadow:inset 0 0 25px #fff1}
 .tank:before{content:"";position:absolute;left:50%;top:-46px;width:66px;height:46px;border:5px solid #fff;border-bottom:0;transform:translateX(-50%);border-radius:10px 10px 0 0}
 .tank:after{content:"";position:absolute;left:50%;top:16px;width:8px;height:60px;background:#fff;box-shadow:0 0 0 3px #d71920,0 0 18px #fff;transform:translateX(-50%);opacity:.85}
@@ -39,6 +39,7 @@ button{cursor:pointer}
 .gas{position:absolute;border-radius:50%;background:#fff;opacity:.65;animation:rise 5s infinite ease-in}
 .g1{width:10px;height:10px;right:315px;bottom:52px}.g2{width:6px;height:6px;right:345px;bottom:36px;animation-delay:1s}.g3{width:13px;height:13px;right:285px;bottom:55px;animation-delay:2s}
 @keyframes rise{0%{transform:translateY(20px) scale(.7);opacity:0}35%{opacity:.7}100%{transform:translateY(-100px) scale(1.4);opacity:0}}
+.gas-monitor{position:absolute;right:315px;bottom:24px;width:72px;height:104px;border:3px solid #fff;border-radius:13px;background:#111c;color:#67ff8d;box-shadow:0 0 22px #0007,0 0 16px #67ff8d33;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:12px;animation:monitorFloat 3.5s ease-in-out infinite}.gas-monitor b{font-size:20px;line-height:1}.gas-monitor span{font-size:10px;color:#fff;margin-top:5px}.gas-scan{position:absolute;left:8px;right:8px;height:2px;background:#67ff8d;top:20px;box-shadow:0 0 8px #67ff8d;animation:scan 2.2s linear infinite}@keyframes scan{0%{top:18px;opacity:.2}50%{opacity:1}100%{top:82px;opacity:.2}}@keyframes monitorFloat{50%{transform:translateY(-8px)}}
 .warning{position:absolute;right:420px;bottom:55px;width:55px;height:48px;clip-path:polygon(50% 0,100% 100%,0 100%);background:#ffd22e;filter:drop-shadow(0 3px 5px #0005);animation:pulse 2.2s infinite}
 .warning:after{content:"!";position:absolute;left:21px;top:14px;font-weight:900;color:#111;font-size:22px}
 @keyframes pulse{50%{transform:scale(1.08);filter:drop-shadow(0 4px 10px #fff7)}}
@@ -86,10 +87,10 @@ tbody tr{cursor:pointer;transition:.15s}tbody tr:hover{background:#fff5f5}
 .modal{display:none;position:fixed;inset:0;background:#0009;z-index:50;padding:18px;overflow:auto}.modal.show{display:flex;align-items:center;justify-content:center}
 .modalbox{width:min(1200px,98vw);max-height:94vh;overflow:auto;background:#fff;border-radius:18px;box-shadow:0 20px 70px #0007}
 .modalhead{position:sticky;top:0;z-index:2;background:linear-gradient(110deg,#b10e17,var(--red));color:#fff;padding:18px 22px;display:flex;justify-content:space-between;align-items:center}.modalhead h3{margin:0;font-size:24px}.close{border:0;background:#fff2;color:#fff;width:40px;height:40px;border-radius:50%;font-size:24px}
-.modalbody{padding:22px}.detailgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.detail{border:1px solid var(--line);border-radius:10px;padding:12px}.detail b{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;margin-bottom:5px}.detail span{font-size:16px;font-weight:700}.ignition-box{margin-top:18px;border:1px solid #f0b8bc;border-radius:12px;padding:15px;background:#fff9f9}.ignition-box h4{margin:0 0 10px;font-size:18px;color:#98131a}.ignrow{display:grid;grid-template-columns:1fr 100px;gap:10px;padding:9px 0;border-bottom:1px solid #f2dddd;font-size:14px}.ignrow:last-child{border-bottom:0}.yes{color:#138047;font-weight:900}.no{color:#777;font-weight:700}
+.modalbody{padding:22px}.detailgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.doc-actions{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 0;padding:15px;background:#f7f7f7;border:1px solid #e5e5e5;border-radius:12px}.doc-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 18px;border:0;border-radius:10px;color:#fff;font-weight:900;text-decoration:none;background:linear-gradient(110deg,#a90d15,#d71920);box-shadow:0 6px 15px #d7192022;transition:.2s}.doc-btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px #d7192038}.doc-btn.secondary{background:linear-gradient(110deg,#252525,#444)}.doc-btn.disabled{background:#bdbdbd;box-shadow:none;pointer-events:none;cursor:not-allowed}.doc-note{font-size:12px;color:#666;margin:4px 0 0;width:100%}.detail{border:1px solid var(--line);border-radius:10px;padding:12px}.detail b{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;margin-bottom:5px}.detail span{font-size:16px;font-weight:700}.ignition-box{margin-top:18px;border:1px solid #f0b8bc;border-radius:12px;padding:15px;background:#fff9f9}.ignition-box h4{margin:0 0 10px;font-size:18px;color:#98131a}.ignrow{display:grid;grid-template-columns:1fr 100px;gap:10px;padding:9px 0;border-bottom:1px solid #f2dddd;font-size:14px}.ignrow:last-child{border-bottom:0}.yes{color:#138047;font-weight:900}.no{color:#777;font-weight:700}
 .safety-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 18px}.safety{background:#171717;color:#fff;border-radius:14px;padding:15px 17px;position:relative;overflow:hidden}.safety strong{font-size:16px}.safety small{display:block;color:#d8d8d8;margin-top:5px;line-height:1.35}.safety:before{content:"";position:absolute;width:7px;left:0;top:0;bottom:0;background:var(--red)}
 @media(max-width:1100px){.cards{grid-template-columns:repeat(3,1fr)}.toolbar{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}.hero-safety{opacity:.35}.safety-strip{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:700px){.header{min-height:330px}.brandrow{align-items:flex-start}.logo{width:170px}.titleblock h1{font-size:32px}.hero-safety{display:none}.cards{grid-template-columns:1fr 1fr}.toolbar{grid-template-columns:1fr}.safety-strip{grid-template-columns:1fr}.detailgrid{grid-template-columns:1fr}.barrow{grid-template-columns:105px 1fr 45px}.container{padding:14px}.card{min-height:105px;padding:15px}.card .num{font-size:30px}}
+@media(max-width:700px){.header{min-height:330px}.brandrow{align-items:flex-start}.logo{width:170px}.titleblock h1{font-size:32px}.hero-safety{display:none}.cards{grid-template-columns:1fr 1fr}.toolbar{grid-template-columns:1fr}.safety-strip{grid-template-columns:1fr}.detailgrid{grid-template-columns:1fr}.doc-actions{display:grid;grid-template-columns:1fr}.doc-btn{width:100%}.barrow{grid-template-columns:105px 1fr 45px}.container{padding:14px}.card{min-height:105px;padding:15px}.card .num{font-size:30px}}
 </style>
 </head>
 <body>
@@ -110,7 +111,7 @@ tbody tr{cursor:pointer;transition:.15s}tbody tr:hover{background:#fff5f5}
     </div>
   </div>
   <div class="hero-safety" aria-hidden="true">
-    <div class="warning"></div><div class="man"></div><div class="tank"></div>
+    <div class="gas-monitor"><div class="gas-scan"></div><b>O₂</b><span>20.9%</span><span>LEL 0%</span><span>H₂S 0 ppm</span></div><div class="warning"></div><div class="man"></div><div class="tank"></div>
     <i class="gas g1"></i><i class="gas g2"></i><i class="gas g3"></i>
   </div>
 </header>
@@ -127,7 +128,7 @@ tbody tr{cursor:pointer;transition:.15s}tbody tr:hover{background:#fff5f5}
     <input id="search" placeholder="Search identification no., description, area, location, ignition source…">
     <select id="dept"><option value="">All departments / sections</option></select>
     <select id="gha"><option value="">All GHA / NGHA</option><option value="GHA">GHA</option><option value="NGH">NGHA</option></select>
-    <button class="btn" id="refresh">Refresh data</button>
+    <button class="btn" id="refresh">↻ Refresh data</button>
   </div>
   <p class="status" id="status">Loading dashboard data…</p>
 
@@ -177,28 +178,29 @@ function getFiltered(){
  const q=norm($("search").value.trim()), dep=$("dept").value, gh=$("gha").value;
  return (DATA?.locations||[]).filter(x=>(!q || Object.values(x).some(v=>norm(typeof v==="object"?JSON.stringify(v):v).includes(q))) && (!dep||x.section===dep) && (!gh||x.gha===gh));
 }
-function pager(elId,total,size,page,setter){
- const pages=Math.max(1,Math.ceil(total/size)); page=Math.min(page,pages);
- let s=`<span style="font-size:14px;color:#666">Show</span><select onchange="${setter}(this.value)"><option ${size==10?"selected":""}>10</option><option ${size==50?"selected":""}>50</option><option ${size==100?"selected":""}>100</option></select><span style="font-size:14px;color:#666">per page</span>`;
- s+=`<button class="pgbtn" onclick="${setter}Page(${page-1})" ${page<=1?"disabled":""}>‹</button>`;
- const start=Math.max(1,Math.min(page-2,pages-4)), end=Math.min(pages,start+4);
- for(let i=start;i<=end;i++)s+=`<button class="pgbtn ${i===page?"active":""}" onclick="${setter}Page(${i})">${i}</button>`;
- s+=`<button class="pgbtn" onclick="${setter}Page(${page+1})" ${page>=pages?"disabled":""}>›</button>`;
+function pager(elId,total,size,page,sizeSetter,pageSetter){
+ const pages=Math.max(1,Math.ceil(total/size));
+ page=Math.max(1,Math.min(page,pages));
+ let s=`<span class="pager-label">Show</span><select onchange="${sizeSetter}(this.value)"><option ${size===10?"selected":""}>10</option><option ${size===50?"selected":""}>50</option><option ${size===100?"selected":""}>100</option></select><span class="pager-label">per page</span>`;
+ s+=`<button class="pgbtn" onclick="${pageSetter}(${page-1})" ${page<=1?"disabled":""}>‹</button>`;
+ const start=Math.max(1,Math.min(page-2,Math.max(1,pages-4))), end=Math.min(pages,start+4);
+ for(let i=start;i<=end;i++)s+=`<button class="pgbtn ${i===page?"active":""}" onclick="${pageSetter}(${i})">${i}</button>`;
+ s+=`<button class="pgbtn" onclick="${pageSetter}(${page+1})" ${page>=pages?"disabled":""}>›</button>`;
  $(elId).innerHTML=s;
 }
-window.setLocSize=v=>{locSize=+v;locPage=1;renderLocations()};
-window.setEntrySize=v=>{entrySize=+v;entryPage=1;renderEntries()};
-window.setLocPage=p=>{locPage=Math.max(1,+p);renderLocations()};
-window.setEntryPage=p=>{entryPage=Math.max(1,+p);renderEntries()};
+window.setLocSize=v=>{locSize=Number(v);locPage=1;renderLocations()};
+window.setEntrySize=v=>{entrySize=Number(v);entryPage=1;renderEntries()};
+window.setLocPage=p=>{locPage=Math.max(1,Number(p));renderLocations()};
+window.setEntryPage=p=>{entryPage=Math.max(1,Number(p));renderEntries()};
 function renderLocations(){
  filtered=getFiltered(); const start=(locPage-1)*locSize, rows=filtered.slice(start,start+locSize);
- $("locBody").innerHTML=rows.map(x=>`<tr onclick="openLoc(${(DATA.locations.indexOf(x))})"><td>${esc(x.sr)}</td><td><b>${esc(x.id)}</b></td><td>${esc(x.description)}</td><td>${esc(x.area||x.section)}</td><td>${esc(x.location)}</td><td><span class="badge ${x.gha==="GHA"?"red":"green"}">${x.gha==="NGH"?"NGHA":esc(x.gha)}</span></td><td><div class="ignchips">${(x.ignition||[]).map(i=>`<span class="chip">${esc(i)}</span>`).join("")||"<span style='color:#777'>None recorded</span>"}</div></td></tr>`).join("") || `<tr><td colspan="7" style="text-align:center;padding:35px;color:#777">No records match the current filters.</td></tr>`;
- pager("locPager",filtered.length,locSize,locPage,"setLocSize");
+ $("locBody").innerHTML=rows.map(x=>`<tr onclick="openLoc(${(DATA.locations.indexOf(x))})"><td>${esc(x.sr)}</td><td><b>${esc(x.id)}</b></td><td>${esc(x.description)}</td><td>${esc(x.area||x.section)}</td><td>${esc(x.location)}</td><td><span class="badge ${x.gha==="GHA"?"red":"green"}">${x.gha==="NGH"?"NGHA":esc(x.gha)}</span></td><td><div class="ignchips">${(x.ignition||[]).map(i=>`<span class="chip">⚠ ${esc(i)}</span>`).join("")||"<span style='color:#777'>No positive source marked</span>"}</div></td></tr>`).join("") || `<tr><td colspan="7" style="text-align:center;padding:35px;color:#777">No records match the current filters.</td></tr>`;
+ pager("locPager",filtered.length,locSize,locPage,"setLocSize","setLocPage");
 }
 function renderEntries(){
  const all=DATA.entries[currentDept]||[], start=(entryPage-1)*entrySize, rows=all.slice(start,start+entrySize);
  $("entryBody").innerHTML=rows.map(x=>`<tr><td>${esc(x.department)}</td><td>${esc(x.sr)}</td><td><b>${esc(x.id)}</b></td><td>${esc(x.description)}</td><td>${esc(x.area)}</td><td>${esc(x.location)}</td><td><span class="badge ${x.gha==="GHA"?"red":"green"}">${x.gha==="NGH"?"NGHA":esc(x.gha)}</span></td><td>${esc(x.zone)}</td><td>${esc(x.size)}</td></tr>`).join("")||`<tr><td colspan="9" style="text-align:center;padding:35px;color:#777">No entry records.</td></tr>`;
- pager("entryPager",all.length,entrySize,entryPage,"setEntrySize");
+ pager("entryPager",all.length,entrySize,entryPage,"setEntrySize","setEntryPage");
 }
 function renderDashboard(){
  const loc=DATA.locations||[], gha=loc.filter(x=>x.gha==="GHA").length, ngh=loc.filter(x=>x.gha==="NGH").length;
@@ -218,17 +220,44 @@ window.openLoc=i=>{
  const details=[["Identification No.",x.id],["Description",x.description],["Area / Section",x.area||x.section],["Location",x.location],["Indoor / Outdoor",x.outdoor],["Large Space",x.large],["Restricted Entry",x.restricted],["Occupancy",x.occupancy],["Hazardous",x.hazardous],["Engulfment",x.engulf],["Converging Walls",x.converging],["Other Hazard",x.otherHazard],["GHA / NGHA",x.gha==="NGH"?"NGHA":x.gha],["Zone",x.zone],["SOP",x.sop],["HIRAC",x.hirac]];
  let ignition=(DATA.ignitionHeaders||[]).map(h=>`<div class="ignrow"><span>${esc(h)}</span><span class="${x.ignitionStatus?.[h]==="✓"?"yes":"no"}">${esc(x.ignitionStatus?.[h]||"—")}</span></div>`).join("");
  $("modalBody").innerHTML=`<div class="detailgrid">${details.map(d=>`<div class="detail"><b>${esc(d[0])}</b><span>${esc(d[1]||"—")}</span></div>`).join("")}</div>
+ <div class="doc-actions">
+   ${documentButton("SOP",x,"📘")}
+   ${documentButton("HIRAC",x,"🛡️")}
+   <div class="doc-note">SOP / HIRAC buttons use the document links configured in the dashboard code. Dashboard users cannot upload or change documents.</div>
+ </div>
  <div class="ignition-box"><h4>Ignition Source — detailed sub-columns</h4>${ignition}<div style="margin-top:12px;font-weight:800;color:#9b151b">Identified / available sources: ${esc(x.availableSources||"—")}</div></div>`;
  $("modal").classList.add("show");
 };
 $("close").onclick=()=>$("modal").classList.remove("show");$("modal").onclick=e=>{if(e.target.id==="modal")$("modal").classList.remove("show")};
 $("search").addEventListener("input",()=>{locPage=1;renderLocations()});$("dept").addEventListener("change",()=>{locPage=1;renderLocations()});$("gha").addEventListener("change",()=>{locPage=1;renderLocations()});
+// ================= DOCUMENT LINKS =================
+// Add your SOP / HIRAC document URLs here.
+// Full URL: https://...  |  GitHub relative path: docs/SOP.pdf
+const DOCUMENT_LINKS = {
+  defaultSOP: "",
+  defaultHIRAC: "",
+  records: {
+    // "Mill-3/CNF/2": { SOP: "docs/CRM-SOP-01.pdf", HIRAC: "docs/CRM-HIRAC-01.pdf" }
+  }
+};
+function documentUrl(type, record){
+  const specific=DOCUMENT_LINKS.records?.[record?.id]?.[type] || "";
+  return (specific || (type==="SOP" ? DOCUMENT_LINKS.defaultSOP : DOCUMENT_LINKS.defaultHIRAC) || "").trim();
+}
+function documentButton(type, record, icon){
+  const url=documentUrl(type,record);
+  const label=type==="SOP" ? "Open SOP" : "Open HIRAC";
+  return url
+    ? `<a class="doc-btn ${type==="HIRAC"?"secondary":""}" href="${esc(url)}" target="_blank" rel="noopener">${icon} ${label}</a>`
+    : `<span class="doc-btn ${type==="HIRAC"?"secondary":""} disabled">${icon} ${label}</span>`;
+}
+
 async function load(){
  $("status").textContent="Loading dashboard data…";
  try{
    const r=await fetch("data.json?ts="+Date.now(),{cache:"no-store"}); if(!r.ok)throw new Error("data.json not found");
    DATA=await r.json(); renderDashboard();
-   $("status").textContent=`Data loaded from the current workbook dataset • Updated ${esc(DATA.generatedAt||"")}`;
+   $("status").textContent=`Live GitHub dataset • Updated ${esc(DATA.generatedAt||"")}`;
  }catch(e){$("status").textContent="Dashboard data could not be loaded. Please check the GitHub Pages deployment and data.json.";console.error(e)}
 }
 $("refresh").onclick=load; load();
