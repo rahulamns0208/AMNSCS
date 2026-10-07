@@ -89,6 +89,31 @@ tbody tr{cursor:pointer;transition:.15s}tbody tr:hover{background:#fff5f5}
 .modalhead{position:sticky;top:0;z-index:2;background:linear-gradient(110deg,#b10e17,var(--red));color:#fff;padding:18px 22px;display:flex;justify-content:space-between;align-items:center}.modalhead h3{margin:0;font-size:24px}.close{border:0;background:#fff2;color:#fff;width:40px;height:40px;border-radius:50%;font-size:24px}
 .modalbody{padding:22px}.detailgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.doc-actions{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 0;padding:15px;background:#f7f7f7;border:1px solid #e5e5e5;border-radius:12px}.doc-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 18px;border:0;border-radius:10px;color:#fff;font-weight:900;text-decoration:none;background:linear-gradient(110deg,#a90d15,#d71920);box-shadow:0 6px 15px #d7192022;transition:.2s}.doc-btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px #d7192038}.doc-btn.secondary{background:linear-gradient(110deg,#252525,#444)}.doc-btn.disabled{background:#bdbdbd;box-shadow:none;pointer-events:none;cursor:not-allowed}.doc-note{font-size:12px;color:#666;margin:4px 0 0;width:100%}.detail{border:1px solid var(--line);border-radius:10px;padding:12px}.detail b{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;margin-bottom:5px}.detail span{font-size:16px;font-weight:700}.ignition-box{margin-top:18px;border:1px solid #f0b8bc;border-radius:12px;padding:15px;background:#fff9f9}.ignition-box h4{margin:0 0 10px;font-size:18px;color:#98131a}.ignrow{display:grid;grid-template-columns:1fr 100px;gap:10px;padding:9px 0;border-bottom:1px solid #f2dddd;font-size:14px}.ignrow:last-child{border-bottom:0}.yes{color:#138047;font-weight:900}.no{color:#777;font-weight:700}
 .safety-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 18px}.safety{background:#171717;color:#fff;border-radius:14px;padding:15px 17px;position:relative;overflow:hidden}.safety strong{font-size:16px}.safety small{display:block;color:#d8d8d8;margin-top:5px;line-height:1.35}.safety:before{content:"";position:absolute;width:7px;left:0;top:0;bottom:0;background:var(--red)}
+
+
+/* AMNS Values animated side rail */
+.values-rail{position:fixed;right:14px;top:310px;width:225px;padding:13px;z-index:15;border:1px solid rgba(255,255,255,.55);
+ background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(248,248,248,.91));border-radius:18px;box-shadow:0 16px 45px rgba(0,0,0,.16);
+ backdrop-filter:blur(10px);overflow:hidden}
+.values-rail:before{content:"";position:absolute;inset:-80px -120px auto auto;width:190px;height:190px;background:radial-gradient(circle,#d7192028,transparent 68%);animation:valueGlow 5s ease-in-out infinite}
+@keyframes valueGlow{50%{transform:scale(1.18);opacity:.55}}
+.values-head{position:relative;display:flex;align-items:center;gap:10px;padding:4px 4px 12px;border-bottom:1px solid #ddd}
+.values-head b{display:block;font-size:13px;letter-spacing:1.3px;color:#8e1117}.values-head small{display:block;margin-top:2px;color:#777;font-weight:700}
+.values-icon{display:grid;place-items:center;width:35px;height:35px;border-radius:11px;background:linear-gradient(135deg,#a90d15,#ed3037);color:#fff;font-size:19px;box-shadow:0 7px 16px #d7192038;animation:valueSpin 4s linear infinite}
+@keyframes valueSpin{50%{transform:rotate(12deg) scale(1.04)}}
+.value-card{position:relative;display:grid;grid-template-columns:28px 1fr 16px;align-items:center;gap:7px;margin-top:8px;padding:10px 8px;border-radius:11px;background:#fff;border:1px solid #e8e8e8;box-shadow:0 4px 12px #0000000a;animation:valueFloat 4s ease-in-out infinite;transition:.25s}
+.value-card:nth-of-type(3){animation-delay:.25s}.value-card:nth-of-type(4){animation-delay:.5s}.value-card:nth-of-type(5){animation-delay:.75s}.value-card:nth-of-type(6){animation-delay:1s}
+@keyframes valueFloat{50%{transform:translateX(-3px)}}
+.value-card:hover{transform:translateX(-5px) scale(1.015);border-color:#e3a0a4;box-shadow:0 8px 20px #d7192020}
+.value-card span{font-size:10px;font-weight:900;color:#d71920}.value-card b{font-size:12px;line-height:1.15}.value-card i{font-style:normal;color:#b3151b;font-weight:900;animation:arrowPulse 1.8s infinite}
+@keyframes arrowPulse{50%{transform:translate(2px,-2px);opacity:.55}}
+.values-line{position:absolute;left:0;top:0;width:3px;height:45%;background:linear-gradient(#d71920,transparent);animation:railMove 3s ease-in-out infinite}
+@keyframes railMove{50%{top:55%;height:25%}}
+@media(min-width:1500px){.container{padding-right:255px}}
+@media(max-width:1499px){.values-rail{right:8px;width:195px;top:300px}.values-rail .value-card{padding:8px 6px}.values-rail .value-card b{font-size:11px}}
+@media(max-width:1100px){.values-rail{position:relative;right:auto;top:auto;width:auto;margin:0 0 18px;border-radius:15px;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.values-head{grid-column:1/-1}.value-card{margin:0}.values-line{display:none}}
+@media(max-width:700px){.values-rail{grid-template-columns:1fr 1fr}.values-head{grid-column:1/-1}.value-card:last-of-type{grid-column:1/-1}}
+
 @media(max-width:1100px){.cards{grid-template-columns:repeat(3,1fr)}.toolbar{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}.hero-safety{opacity:.35}.safety-strip{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.header{min-height:330px}.brandrow{align-items:flex-start}.logo{width:170px}.titleblock h1{font-size:32px}.hero-safety{display:none}.cards{grid-template-columns:1fr 1fr}.toolbar{grid-template-columns:1fr}.safety-strip{grid-template-columns:1fr}.detailgrid{grid-template-columns:1fr}.doc-actions{display:grid;grid-template-columns:1fr}.doc-btn{width:100%}.barrow{grid-template-columns:105px 1fr 45px}.container{padding:14px}.card{min-height:105px;padding:15px}.card .num{font-size:30px}}
 </style>
@@ -115,6 +140,16 @@ tbody tr{cursor:pointer;transition:.15s}tbody tr:hover{background:#fff5f5}
     <i class="gas g1"></i><i class="gas g2"></i><i class="gas g3"></i>
   </div>
 </header>
+
+<aside class="values-rail" aria-label="AMNS Values">
+  <div class="values-head"><span class="values-icon">✦</span><div><b>AMNS VALUES</b><small>How we work</small></div></div>
+  <div class="value-card"><span>01</span><b>Forever dynamic</b><i>↗</i></div>
+  <div class="value-card"><span>02</span><b>Always collaborative</b><i>↗</i></div>
+  <div class="value-card"><span>03</span><b>Consistently excellent</b><i>↗</i></div>
+  <div class="value-card"><span>04</span><b>Endless creative</b><i>↗</i></div>
+  <div class="value-card"><span>05</span><b>Interdependently safe</b><i>↗</i></div>
+  <div class="values-line"></div>
+</aside>
 
 <main class="container">
   <section class="safety-strip">
@@ -174,9 +209,18 @@ let DATA=null, filtered=[], locPage=1, entryPage=1, locSize=10, entrySize=10, cu
 const $=id=>document.getElementById(id);
 const esc=v=>String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
 const norm=v=>String(v??"").toLowerCase();
+function canon(v){
+ return norm(v).replace(/department\s*[-:]?/g,"").replace(/\s+/g," ").trim();
+}
 function getFiltered(){
- const q=norm($("search").value.trim()), dep=$("dept").value, gh=$("gha").value;
- return (DATA?.locations||[]).filter(x=>(!q || Object.values(x).some(v=>norm(typeof v==="object"?JSON.stringify(v):v).includes(q))) && (!dep||x.section===dep) && (!gh||x.gha===gh));
+ const q=norm($("search").value.trim()), dep=canon($("dept").value), gh=canon($("gha").value);
+ return (DATA?.locations||[]).filter(x=>{
+   const hay=Object.values(x).some(v=>norm(typeof v==="object"?JSON.stringify(v):v).includes(q));
+   const section=canon(x.section||x.department||x.area);
+   const gha=canon(x.gha)==="ngh"?"ngha":canon(x.gha);
+   const ghOk=!gh || gh===gha || (gh==="ngha" && gha==="ngh");
+   return (!q || hay) && (!dep || section===dep) && ghOk;
+ });
 }
 function pager(elId,total,size,page,sizeSetter,pageSetter){
  const pages=Math.max(1,Math.ceil(total/size));
@@ -198,7 +242,8 @@ function renderLocations(){
  pager("locPager",filtered.length,locSize,locPage,"setLocSize","setLocPage");
 }
 function renderEntries(){
- const all=DATA.entries[currentDept]||[], start=(entryPage-1)*entrySize, rows=all.slice(start,start+entrySize);
+ const key=Object.keys(DATA.entries||{}).find(k=>canon(k)===canon(currentDept));
+ const all=(key?DATA.entries[key]:[]), start=(entryPage-1)*entrySize, rows=all.slice(start,start+entrySize);
  $("entryBody").innerHTML=rows.map(x=>`<tr><td>${esc(x.department)}</td><td>${esc(x.sr)}</td><td><b>${esc(x.id)}</b></td><td>${esc(x.description)}</td><td>${esc(x.area)}</td><td>${esc(x.location)}</td><td><span class="badge ${x.gha==="GHA"?"red":"green"}">${x.gha==="NGH"?"NGHA":esc(x.gha)}</span></td><td>${esc(x.zone)}</td><td>${esc(x.size)}</td></tr>`).join("")||`<tr><td colspan="9" style="text-align:center;padding:35px;color:#777">No entry records.</td></tr>`;
  pager("entryPager",all.length,entrySize,entryPage,"setEntrySize","setEntryPage");
 }
@@ -210,7 +255,7 @@ function renderDashboard(){
  const sec=Object.entries(DATA.sections).sort((a,b)=>b[1]-a[1]), max=Math.max(...sec.map(x=>x[1]),1);
  $("sectionBars").innerHTML=sec.map(([k,v])=>`<div class="barrow"><b>${esc(k)}</b><div class="bar"><div class="fill" style="width:${v/max*100}%"></div></div><strong>${v}</strong></div>`).join("");
  $("dept").innerHTML=`<option value="">All departments / sections</option>`+DATA.departments.map(x=>`<option>${esc(x)}</option>`).join("");
- $("tabs").innerHTML=DATA.departments.map((x,i)=>`<button class="tab ${i===0?"active":""}" onclick="selectDept('${esc(x)}',this)">${esc(x)}</button>`).join("");
+ $("tabs").innerHTML=DATA.departments.map((x,i)=>`<button class="tab ${i===0?"active":""}" onclick="selectDept(${JSON.stringify(x)},this)">${esc(x)}</button>`).join("");
  currentDept=DATA.departments[0]||""; renderLocations();renderEntries();
 }
 window.selectDept=(dep,el)=>{currentDept=dep;entryPage=1;document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));el.classList.add("active");renderEntries()};
@@ -229,7 +274,9 @@ window.openLoc=i=>{
  $("modal").classList.add("show");
 };
 $("close").onclick=()=>$("modal").classList.remove("show");$("modal").onclick=e=>{if(e.target.id==="modal")$("modal").classList.remove("show")};
-$("search").addEventListener("input",()=>{locPage=1;renderLocations()});$("dept").addEventListener("change",()=>{locPage=1;renderLocations()});$("gha").addEventListener("change",()=>{locPage=1;renderLocations()});
+$("search").addEventListener("input",()=>{locPage=1;renderLocations()});
+$("dept").addEventListener("change",()=>{locPage=1;renderLocations()});
+$("gha").addEventListener("change",()=>{locPage=1;renderLocations()});
 // ================= DOCUMENT LINKS =================
 // Add your SOP / HIRAC document URLs here.
 // Full URL: https://...  |  GitHub relative path: docs/SOP.pdf
