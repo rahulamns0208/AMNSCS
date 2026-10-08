@@ -1,43 +1,44 @@
-AM/NS India — Confined Space & Gas Hazards Area Dashboard
+AM/NS INDIA — FINAL GITHUB UPDATE PACKAGE
 
-TWO DASHBOARD VIEWS
-1. Confined Space
-2. Gas Hazards Area
+THIS VERSION FIXES THE 116 vs 121 PROBLEM
+------------------------------------------
+The dashboard no longer depends on a permanently fixed 121-record data file.
+GitHub Actions regenerates data.json whenever the confined-space Excel workbook changes.
 
-DATA SOURCES
-- Confined-space data: Updated CS Identification all.xlsx
-- Gas-hazard data: AMNS_Pune_Gas_Hazardous_Area_Safety_Register.xlsx
-- NGH source values are normalized and displayed as NGHA.
-- Size values in the entry register are normalized to mm format.
+IMPORTANT FIRST UPLOAD
+----------------------
+1. In your GitHub repository, delete the OLD 121-record confined-space Excel workbook.
+2. Upload your CURRENT 116-record confined-space Excel workbook.
+3. Keep only one confined-space workbook in the repository.
+4. Keep AMNS_Pune_Gas_Hazardous_Area_Safety_Register.xlsx for Gas Hazards Area.
+5. Commit the changes to the main branch.
 
-AUTOMATIC EXCEL -> WEBSITE UPDATE
-The repository includes .github/workflows/deploy-dashboard.yml.
+WORKBOOK NAME
+-------------
+The generator gives priority to:
+Copy of Updated CS Identification all (2).xlsx
+then Updated CS Identification all.xlsx
+then Updated CS Identification all (1).xlsx
+If none exists, it selects the newest non-gas Excel workbook.
 
-When either workbook is changed on GitHub and the change is pushed to the
-main or master branch, GitHub Actions automatically:
-1. Reads the updated Excel workbook.
-2. Runs tools/generate_data.py.
-3. Runs tools/generate_gas_data.py.
-4. Builds the current dashboard with the newly generated data.
-5. Deploys the updated dashboard to GitHub Pages.
+AUTOMATIC UPDATE
+----------------
+After the Excel file is committed, GitHub Actions runs automatically:
+.github/workflows/update-dashboard.yml
 
-IMPORTANT: Editing an Excel file only on your iPhone/PC does NOT change the
-live website. The updated Excel workbook must be uploaded/committed to the
-GitHub repository (or pushed with git). Once GitHub receives that commit,
-the workflow updates the live dashboard automatically.
+It regenerates:
+- data.json (Confined Space)
+- gas_data.json (Gas Hazards Area)
 
-FIRST-TIME GITHUB PAGES SETUP
-1. Upload the contents of this folder to a GitHub repository.
-2. Use the main branch (or master) for the repository.
-3. In GitHub: Settings -> Pages -> Build and deployment, choose GitHub Actions.
-4. Push/change either Excel workbook.
-5. Open Actions and wait for 'Build and Deploy AMNS Safety Dashboard' to finish.
-6. The Pages URL shown by the workflow is the live dashboard.
+It then commits the refreshed JSON back to main. GitHub Pages will publish the updated files when Pages is configured from the main branch.
 
-The workflow is intentionally triggered by Excel changes plus dashboard/tool
-changes, so future workbook updates refresh the live site without manually
-editing data.json or gas_data.json.
+MANUAL UPDATE
+-------------
+If needed, open GitHub -> Actions -> AMNS Dashboard - Excel Auto Update -> Run workflow.
 
-SAFETY NOTE
-The blast/pressure animation is a visual safety simulation only. It does not
-represent a real explosion or operating instruction.
+DO NOT EDIT data.json MANUALLY.
+
+EXPECTED RESULT
+---------------
+After the 116-record workbook is uploaded and the workflow completes, the dashboard count will be taken from the workbook, not a hard-coded 121.
+The dashboard also normalizes NGH to NGHA and keeps Size (mm).
