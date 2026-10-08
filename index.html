@@ -240,6 +240,81 @@ input:focus,select:focus{outline:2px solid #d7192030;border-color:#d71920}
 /* Keep every safety state in the red/white family */
 .risk-medium,.risk-low,.badge.green,.gas-chip{background:#fff0f1!important;color:#a70f16!important;border-color:#e4bfc2!important}
 .gas-monitor{background:#8e171d;color:#fff}.gas-scan{background:#fff;box-shadow:0 0 8px #fff}.pulse-dot{background:#d71920;box-shadow:0 0 0 0 #d7192038}.gas-icon{background:#fff0f1;color:#a70f16}.gas-icon:before,.gas-icon:after{border-color:#d71920}.hero-detector{color:#a70f16}.hero-detector .pulse-dot{background:#d71920}.section-kicker{color:#a70f16!important}.gas-chip{background:#fff0f1!important;color:#a70f16!important}.gas-bar-list .fill{background:linear-gradient(90deg,#a90d15,#d71920)!important}.gas-reference{background:#fff!important;border-color:#ead1d3!important}.gas-reference h2{color:#8e171d!important}
+
+/* === FINAL USER-DIRECTED RED + WHITE VISUAL SYSTEM === */
+body{background:#fff!important;color:#171717!important}
+.header{background:linear-gradient(115deg,#9f0c14 0%,#d71920 55%,#b70f17 100%)!important}
+.dashboard-switch{background:#fff!important;border-color:#efc2c5!important}
+.switch-btn{background:#fff!important;color:#8e171d!important;border:1px solid #e3b7bb!important;box-shadow:0 5px 15px rgba(167,15,22,.08)!important}
+.switch-btn:hover{border-color:#d71920!important;color:#d71920!important}
+.switch-btn.active{background:#d71920!important;color:#fff!important;border-color:#d71920!important}
+.container{background:#fff!important}
+.panel,.register,.cs-visual-showcase,.cs-process,.gas-scene,.gas-reference{background:#fff!important;border-color:#ead1d3!important}
+.panel h2,.register h2,.scene-copy h3{color:#8e171d!important}
+.filterbar{background:#fff!important;border-color:#ead1d3!important}
+.filtercell label{color:#8e171d!important}
+input,select{border-color:#e4bfc2!important;background:#fff!important;color:#222!important}
+input:focus,select:focus{outline:2px solid #d7192030!important;border-color:#d71920!important}
+.tablewrap{border-color:#ead1d3!important}.tablewrap thead th{background:#d71920!important;color:#fff!important}.tablewrap tbody tr:hover{background:#fff4f4!important}
+.tab{background:#fff!important;color:#8e171d!important;border-color:#e4bfc2!important}.tab.active{background:#d71920!important;color:#fff!important;border-color:#d71920!important}
+.pagination .pgbtn.active,.pagination .pgbtn:hover{background:#d71920!important;border-color:#d71920!important;color:#fff!important}
+.footer{background:#d71920!important;color:#fff!important}
+.modal{background:rgba(88,0,4,.72)!important}.modalhead{background:#d71920!important;color:#fff!important}.modalbox{background:#fff!important;border-color:#ead1d3!important}
+.doc-btn{background:#d71920!important}.doc-btn.secondary{background:#fff!important;color:#8e171d!important;border:1px solid #d71920!important}
+.safety{background:#fff!important;color:#8e171d!important;border:1px solid #ead1d3!important}.safety small{color:#6f5b5d!important}
+.live-safety-band{background:#fff5f5!important;border-color:#edc5c8!important}.live-safety-band strong{color:#8e171d!important}.live-status{color:#a70f16!important}.live-status i{background:#d71920!important}
+/* semantic status colours only */
+.badge.red,.risk-high{background:#ffe4e5!important;color:#b01820!important;border-color:#e9aeb3!important}
+.badge.green,.risk-low{background:#e5f6ea!important;color:#19713e!important;border-color:#9fd2ae!important}
+.risk-medium{background:#fff2bf!important;color:#8a6100!important;border-color:#e7ca63!important}
+.gas-chip{background:#fff4f4!important;color:#9f171e!important;border-color:#e6b9bc!important}
+.card.green{background:linear-gradient(135deg,#fff,#f0faf3)!important;border-top-color:#1f8a4c!important}.card.green .num{color:#19713e!important}
+.card.blue,.card.dark{background:#fff!important;border-top-color:#d71920!important}.card.blue .num,.card.dark .num{color:#a70f16!important}
+.dot.gray{background:#e5f6ea!important;border:2px solid #1f8a4c!important}.legend .dot{background:#d71920!important}.legend .dot.gray{background:#1f8a4c!important}
+.gas-summary-grid .card.green{border-top-color:#1f8a4c!important;background:linear-gradient(135deg,#fff,#f0faf3)!important}.gas-summary-grid .card.green .num{color:#19713e!important}
+.gas-summary-grid .card.blue,.gas-summary-grid .card.dark{border-top-color:#d71920!important;background:#fff!important}
+.gas-summary-grid .card .num{color:#a70f16!important}
+.gas-bar-list .fill{background:linear-gradient(90deg,#a90d15,#d71920)!important}
+/* New page-entry animations */
+.dashboard-panel.page-enter{animation:pageReveal .72s cubic-bezier(.2,.75,.2,1) both!important}
+.dashboard-panel.page-enter .live-safety-band{animation:bandDrop .55s .08s both}
+#confinedPanel.page-enter .cs-process{animation:airlockReveal .9s .15s both}
+#gasPanel.page-enter .gas-visual-v2{animation:gasBurstReveal 1s .12s both}
+@keyframes pageReveal{from{opacity:0;transform:translateY(22px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes bandDrop{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
+@keyframes airlockReveal{0%{opacity:0;transform:scale(.94);clip-path:inset(0 45% 0 45%)}55%{opacity:1;clip-path:inset(0 0 0 0);transform:scale(1.01)}100%{transform:scale(1)}}
+@keyframes gasBurstReveal{0%{opacity:0;transform:scale(.86)}55%{opacity:1;transform:scale(1.025)}100%{transform:scale(1)}}
+/* Confined-space visual redesign: entry-door / communication / attendant / rescue */
+.cs-process{min-height:285px!important;background:linear-gradient(145deg,#fff,#fff7f7)!important}
+.cs-process .process-title{color:#8e171d!important}.cs-process .process-title small{color:#765d60!important}
+.cs-scene{background:linear-gradient(90deg,#fff 0 68%,#fff7f7 68% 100%)}
+.hatch{left:10%!important;bottom:30px!important;width:210px!important;height:120px!important;border-radius:10px!important;border-width:6px!important;box-shadow:inset 0 0 0 12px #fff4f4,0 12px 25px #d7192015!important;animation:doorGlow 3s ease-in-out infinite}
+.hatch:before{left:34px!important;right:34px!important;bottom:18px!important;height:10px!important}.hatch:after{left:62px!important;top:18px!important;font-size:12px!important;content:"CONFINED SPACE • ENTRY"!important}
+.entrant{left:29%!important;bottom:35px!important;animation:entrantWalk 3.2s ease-in-out infinite!important}
+.attendant{right:19%!important;bottom:35px!important;animation:attendantWatch 2.8s ease-in-out infinite!important}
+.signal{right:31%!important;bottom:132px!important;animation:radioLink 2.4s ease-in-out infinite!important}
+.gas-tester{left:44%!important;bottom:38px!important;animation:testerScan 2.2s ease-in-out infinite!important}
+.tripod{right:7%!important;bottom:25px!important;transform:scale(1.08);transform-origin:bottom center}
+.cs-process:after{content:"ENTRY CONTROL • ATTENDANT WATCH • 2-WAY COMMUNICATION • ATMOSPHERE MONITORING • RESCUE READY";position:absolute;left:20px;right:20px;bottom:10px;text-align:center;font-size:9px;letter-spacing:1.4px;font-weight:900;color:#a70f16;opacity:.72}
+@keyframes doorGlow{50%{box-shadow:inset 0 0 0 12px #fff0f1,0 0 0 7px #d7192010,0 16px 28px #d7192018}}
+@keyframes entrantWalk{0%,100%{transform:translateX(0)}45%{transform:translateX(14px)}65%{transform:translateX(18px) translateY(-3px)}}
+@keyframes attendantWatch{50%{transform:translateY(-3px) rotate(-1deg)}}
+@keyframes radioLink{0%,100%{opacity:.65;transform:scale(.96)}50%{opacity:1;transform:scale(1.04)}}
+@keyframes testerScan{50%{transform:translateY(-5px) rotate(2deg)}}
+/* Gas visual: stronger flowing-gas + pressure-release animation */
+.gas-scene{background:linear-gradient(145deg,#fff,#fff7f7)!important}
+.gas-scene:before{background:linear-gradient(120deg,transparent 0 62%,rgba(215,25,32,.055) 63% 64%,transparent 65%)!important}
+.pipe{background:#b70f17!important;box-shadow:0 0 0 2px #fff,0 5px 12px rgba(215,25,32,.2)!important}
+.gas-stream{background:radial-gradient(circle,#d71920 0 32%,#ef3b3f 34% 58%,transparent 62%)!important;box-shadow:0 0 12px #d7192055!important}
+.detector-unit{border-color:#d71920!important}.detector-screen{background:#8e171d!important;color:#fff!important}.detector-unit i{background:#d71920!important}
+.worker .helmet,.worker .mask,.worker .worker-body,.worker .worker-vest{border-color:#d71920!important}.air-wave{border-color:#d71920!important}
+.blast-core{background:#d71920!important;box-shadow:0 0 0 8px #fff,0 0 0 11px #d71920!important}.blast-wave{border-color:#d71920!important}.isolation-valve{border-color:#d71920!important;background:#fff!important}.valve-wheel{border-color:#a70f16!important}.zone-label{color:#a70f16!important;border-color:#e4bfc2!important;background:#fff!important}
+/* remove blue/teal legacy visual remnants */
+.hero-detector,.hero-cylinder,.hero-ring,.hero-beam{color:#fff}
+.live-icon,.confined-icon,.gas-icon{background:#fff0f1!important;color:#a70f16!important}
+.gas-art-panel,.gas-reference{background:#fff!important}
+@media(prefers-reduced-motion:reduce){.dashboard-panel.page-enter,.dashboard-panel.page-enter *{animation:none!important}}
+
 </style>
 </head>
 
@@ -381,9 +456,15 @@ const norm=v=>String(v??"").toLowerCase();
 function canon(v){return norm(v).replace(/department\s*[-:]?/g,"").replace(/\s+/g," ").trim();}
 function showDashboard(which){
   const map={confined:"confinedPanel",gas:"gasPanel"};
-  Object.keys(map).forEach(k=>$(map[k]).classList.toggle("active",k===which));
+  Object.keys(map).forEach(k=>{
+    const panel=$(map[k]);
+    panel.classList.toggle("active",k===which);
+    panel.classList.remove("page-enter");
+  });
   ["switchConfined","switchGas"].forEach(id=>$(id).classList.remove("active"));
   $("switch"+which.charAt(0).toUpperCase()+which.slice(1)).classList.add("active");
+  const active=$(map[which]);
+  requestAnimationFrame(()=>{active.classList.add("page-enter"); setTimeout(()=>active.classList.remove("page-enter"),1200);});
   window.scrollTo({top:document.querySelector(".dashboard-switch").offsetTop-10,behavior:"smooth"});
 }
 function pager(elId,total,size,page,sizeSetter,pageSetter){
@@ -513,5 +594,6 @@ async function load(){
  }catch(e){console.error(e);alert("Dashboard data could not be loaded. Check that data.json and gas_data.json are deployed with the dashboard.");}
 }
 load();
+setTimeout(()=>showDashboard("confined"),40);
 </script>
 </html>
