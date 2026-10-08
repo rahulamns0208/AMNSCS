@@ -200,6 +200,46 @@ body{background:#f6f6f6}
 @media(max-width:1050px){.gas-visual-v2{grid-template-columns:1fr 1fr}.gas-scene:first-child{grid-column:span 2}}@media(max-width:700px){.gas-visual-v2{grid-template-columns:1fr}.gas-scene:first-child{grid-column:auto}.scene-copy{max-width:72%}.worker{right:24px;transform:scale(.86);transform-origin:bottom right}.detector-unit{right:18px}.blast-core{right:35px}.blast-wave{right:2px}}
 @media(prefers-reduced-motion:reduce){.gas-scene *{animation:none!important}}
 
+
+/* FINAL AM/NS RED + WHITE SAFETY THEME */
+:root{--red:#d71920;--red2:#a70f16;--red3:#ef3b3f;--ink:#171717;--muted:#616161;--line:#ead1d3;--soft:#fff6f6;--dark:#8e171d;--green:#d71920;--amber:#d71920;--shadow:0 12px 32px rgba(167,15,22,.10)}
+body{background:#fff;color:var(--ink)}
+.container{background:#fff}
+.cards .card.green,.cards .card.blue,.cards .card.dark{background:linear-gradient(135deg,#fff,#fff5f5);border-top-color:var(--red)}
+.cards .card.green .num,.cards .card.blue .num,.cards .card.dark .num{color:#a70f16}
+.badge.green,.badge.blue,.badge.dark{background:#fff0f1!important;color:#a70f16!important;border-color:#e6b9bc!important}
+.dot.gray{background:#fff;border:2px solid var(--red)}
+.panel,.register{background:#fff;border-color:#ead1d3}
+.panel h2,.register h2{color:#8e171d}
+.filterbar{background:#fff7f7;border-color:#ead1d3}
+.filtercell label{color:#8e171d}
+input,select{border-color:#e4bfc2;background:#fff}
+input:focus,select:focus{outline:2px solid #d7192030;border-color:#d71920}
+.tab{background:#fff;color:#8e171d;border-color:#e4bfc2}.tab.active{background:#d71920;color:#fff;border-color:#d71920}.tab-count{background:#fff0f1;color:#a70f16}.tab.active .tab-count{background:#fff;color:#a70f16}
+.pagination .pgbtn.active{background:#d71920;border-color:#d71920}.pagination select{border-color:#e4bfc2}
+.tablewrap thead th{background:#d71920;color:#fff}.tablewrap tbody tr:hover{background:#fff4f4}
+.footer{background:#d71920;color:#fff;border-top:0}
+.section-kicker{color:#a70f16}.live-safety-band{background:#fff4f4;border-color:#edc5c8}.live-safety-band strong{color:#8e171d}.live-status{color:#a70f16!important}.live-status i{background:#d71920!important;box-shadow:0 0 0 0 #d7192038!important}
+/* Confined-space safety process animation */
+.cs-process{position:relative;margin:0 0 20px;border:1px solid #e8c5c7;border-radius:18px;background:linear-gradient(145deg,#fff,#fff7f7);overflow:hidden;box-shadow:0 12px 30px rgba(167,15,22,.08);min-height:255px}
+.cs-process .process-title{position:relative;z-index:5;padding:18px 20px 0;color:#8e171d}.cs-process .process-title small{display:block;color:#7a5d60;font-weight:700;margin-top:4px}
+.cs-scene{position:absolute;inset:0;overflow:hidden}
+.hatch{position:absolute;left:12%;bottom:32px;width:170px;height:95px;border:5px solid #d71920;border-radius:18px 18px 10px 10px;background:#fff;box-shadow:0 8px 18px #d7192012}.hatch:before{content:"";position:absolute;left:20px;right:20px;bottom:14px;height:8px;border-radius:99px;background:#d71920}.hatch:after{content:"ENTRY";position:absolute;left:48px;top:12px;font-size:11px;font-weight:900;color:#a70f16;letter-spacing:1.5px}
+.entrant{position:absolute;left:22%;bottom:37px;width:80px;height:150px;z-index:4;animation:entrantBreathe 3.8s ease-in-out infinite}.entrant .head{position:absolute;left:24px;top:0;width:38px;height:45px;border:3px solid #a70f16;border-radius:50%;background:#fff}.entrant .helmet{position:absolute;left:17px;top:-8px;width:52px;height:20px;border:3px solid #d71920;border-bottom:0;border-radius:30px 30px 0 0;background:#fff}.entrant .body{position:absolute;left:13px;top:48px;width:55px;height:76px;border:3px solid #d71920;border-radius:15px;background:#fff}.entrant .rope{position:absolute;left:39px;top:119px;height:50px;border-left:3px dashed #d71920;animation:ropePulse 2.2s linear infinite}.entrant .lamp{position:absolute;left:60px;top:57px;width:16px;height:20px;border:2px solid #d71920;border-radius:4px;background:#fff;box-shadow:0 0 0 5px #d7192010;animation:lampPulse 1.8s infinite}
+.attendant{position:absolute;right:18%;bottom:37px;width:90px;height:165px;z-index:4;animation:attendantFloat 3.8s ease-in-out infinite}.attendant .head{position:absolute;left:25px;top:8px;width:38px;height:43px;border:3px solid #a70f16;border-radius:50%;background:#fff}.attendant .helmet{position:absolute;left:18px;top:0;width:52px;height:19px;border:3px solid #d71920;border-bottom:0;border-radius:30px 30px 0 0;background:#fff}.attendant .body{position:absolute;left:10px;top:51px;width:65px;height:84px;border:3px solid #d71920;border-radius:15px;background:#fff}.attendant .radio{position:absolute;right:-7px;top:66px;width:23px;height:34px;border:3px solid #d71920;border-radius:5px;background:#fff}.attendant .radio:after{content:"";position:absolute;left:9px;top:-14px;height:14px;border-left:2px solid #d71920}.attendant .hand{position:absolute;left:-8px;top:69px;width:27px;border-top:4px solid #d71920;transform:rotate(-18deg)}
+.signal{position:absolute;right:29%;bottom:130px;width:110px;height:80px;z-index:3}.signal i{position:absolute;left:0;right:0;top:35px;border-top:2px dashed #d71920;animation:signalDash 1.4s linear infinite}.signal:before,.signal:after{content:"";position:absolute;right:0;top:4px;border:2px solid #d71920;border-left-color:transparent;border-top-color:transparent;border-bottom-color:transparent;border-radius:50%;animation:signalWave 2s ease-out infinite}.signal:before{width:42px;height:42px}.signal:after{width:70px;height:70px;top:-10px;right:-14px;animation-delay:.55s}.signal b{position:absolute;left:7px;top:18px;color:#a70f16;font-size:9px;letter-spacing:1px}
+.tripod{position:absolute;right:7%;bottom:28px;width:130px;height:150px;z-index:2}.tripod:before{content:"";position:absolute;left:62px;top:5px;height:120px;border-left:5px solid #d71920}.tripod:after{content:"";position:absolute;left:10px;right:10px;bottom:0;height:5px;background:#d71920;box-shadow:18px -60px 0 -1px #d71920,60px -60px 0 -1px #d71920}.tripod .pulley{position:absolute;left:50px;top:0;width:28px;height:28px;border:4px solid #a70f16;border-radius:50%;background:#fff;animation:pulleySpin 3s linear infinite}
+.gas-tester{position:absolute;left:44%;bottom:42px;width:60px;height:88px;border:3px solid #d71920;border-radius:10px;background:#fff;z-index:5;box-shadow:0 8px 18px #d7192020;animation:testerFloat 2.8s ease-in-out infinite}.gas-tester:before{content:"O₂";position:absolute;left:9px;top:12px;width:36px;padding:5px 0;background:#fff0f1;color:#a70f16;border:1px solid #e7b7bb;border-radius:5px;text-align:center;font-weight:900;font-size:12px}.gas-tester:after{content:"SAFE";position:absolute;left:15px;bottom:11px;color:#a70f16;font-size:9px;font-weight:900;letter-spacing:1px;animation:testerBlink 1.8s infinite}
+.process-step{position:absolute;top:18px;right:20px;display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end;max-width:58%;z-index:6}.process-step span{padding:7px 10px;border:1px solid #e4bfc2;border-radius:999px;background:#fff;color:#8e171d;font-size:10px;font-weight:900;letter-spacing:.6px}.process-step span.active{background:#d71920;color:#fff;border-color:#d71920;animation:stepPulse 2.2s infinite}
+@keyframes entrantBreathe{50%{transform:translateY(-4px)}}@keyframes attendantFloat{50%{transform:translateY(-3px)}}@keyframes ropePulse{50%{border-color:#ef3b3f;opacity:.55}}@keyframes lampPulse{50%{box-shadow:0 0 0 8px #d7192012,0 0 16px #d7192033}}@keyframes signalDash{to{stroke-dashoffset:-20}}@keyframes signalWave{0%{transform:scale(.65);opacity:.1}45%{opacity:.7}100%{transform:scale(1.15);opacity:0}}@keyframes pulleySpin{to{transform:rotate(360deg)}}@keyframes testerFloat{50%{transform:translateY(-6px)}}@keyframes testerBlink{50%{opacity:.35}}@keyframes stepPulse{50%{box-shadow:0 0 0 5px #d7192010}}
+@media(max-width:800px){.process-step{position:relative;top:auto;right:auto;padding:0 16px 8px;max-width:none}.cs-process{min-height:330px}.entrant{left:18%}.attendant{right:13%}.signal{right:26%;bottom:125px}.gas-tester{left:48%}}
+@media(prefers-reduced-motion:reduce){.cs-process *{animation:none!important}}
+
+.size-mm{font-weight:900;color:#a70f16;white-space:nowrap}
+
+/* Keep every safety state in the red/white family */
+.risk-medium,.risk-low,.badge.green,.gas-chip{background:#fff0f1!important;color:#a70f16!important;border-color:#e4bfc2!important}
+.gas-monitor{background:#8e171d;color:#fff}.gas-scan{background:#fff;box-shadow:0 0 8px #fff}.pulse-dot{background:#d71920;box-shadow:0 0 0 0 #d7192038}.gas-icon{background:#fff0f1;color:#a70f16}.gas-icon:before,.gas-icon:after{border-color:#d71920}.hero-detector{color:#a70f16}.hero-detector .pulse-dot{background:#d71920}.section-kicker{color:#a70f16!important}.gas-chip{background:#fff0f1!important;color:#a70f16!important}.gas-bar-list .fill{background:linear-gradient(90deg,#a90d15,#d71920)!important}.gas-reference{background:#fff!important;border-color:#ead1d3!important}.gas-reference h2{color:#8e171d!important}
 </style>
 </head>
 
@@ -231,6 +271,18 @@ body{background:#f6f6f6}
 <main class="container">
   <section id="confinedPanel" class="dashboard-panel active">
     <div class="live-safety-band"><div class="live-icon confined-icon"><span></span></div><div><strong>CONFINED SPACE CONTROL LOOP</strong><small>Identify → classify GHA / NGHA → isolate → test atmosphere → permit → enter → continuously monitor → rescue ready</small></div><div class="live-status"><i></i> SAFETY READY</div></div>
+    <section class="cs-process" aria-label="Confined space safe entry process animation">
+      <div class="process-title"><strong>SAFE ENTRY • ENTRY / ATTENDANT / COMMUNICATION / ATMOSPHERE / RESCUE</strong><small>Visual process reminder — follow the approved permit, risk assessment, isolation and rescue procedure at site.</small></div>
+      <div class="process-step"><span class="active">1 IDENTIFY</span><span>2 ISOLATE</span><span>3 TEST</span><span>4 PERMIT</span><span>5 ENTER</span><span>6 MONITOR</span><span>7 RESCUE READY</span></div>
+      <div class="cs-scene">
+        <div class="hatch"></div>
+        <div class="entrant"><div class="helmet"></div><div class="head"></div><div class="body"></div><div class="rope"></div><div class="lamp"></div></div>
+        <div class="gas-tester"></div>
+        <div class="attendant"><div class="helmet"></div><div class="head"></div><div class="body"></div><div class="radio"></div><div class="hand"></div></div>
+        <div class="signal"><i></i><b>2-WAY RADIO</b></div>
+        <div class="tripod"><div class="pulley"></div></div>
+      </div>
+    </section>
     <div class="section-kicker">Confined Space Dashboard</div>
     <section class="cards">
       <div class="card red"><div class="label">Confined spaces</div><div class="num" id="kpiTotal">—</div></div>
@@ -261,7 +313,7 @@ body{background:#f6f6f6}
       <div class="register-head"><div><h2>Department Entry Registers</h2><p>Department tabs are the filter for this table.</p></div></div>
       <div class="tabs" id="tabs"></div>
       <div class="pagination" id="entryPager"></div>
-      <div class="tablewrap"><table class="entrytable"><thead><tr><th>Department</th><th>Sr.</th><th>Identification No.</th><th>Description</th><th>Area</th><th>Location</th><th>GHA / NGHA</th><th>Zone</th><th>Size</th></tr></thead><tbody id="entryBody"></tbody></table></div>
+      <div class="tablewrap"><table class="entrytable"><thead><tr><th>Department</th><th>Sr.</th><th>Identification No.</th><th>Description</th><th>Area</th><th>Location</th><th>GHA / NGHA</th><th>Zone</th><th>Size (mm)</th></tr></thead><tbody id="entryBody"></tbody></table></div>
     </section>
   </section>
 
@@ -363,10 +415,20 @@ function renderLocations(){
  $("locBody").innerHTML=rows.map(x=>`<tr onclick="openCS(${DATA.locations.indexOf(x)})"><td>${esc(x.sr)}</td><td><b>${esc(x.id)}</b></td><td>${esc(x.description)}</td><td>${esc(x.area||x.section)}</td><td>${esc(x.location)}</td><td><span class="badge ${x.gha==="GHA"?"red":"green"}">${esc(x.gha)}</span></td><td><div class="ignchips">${(x.ignition||[]).map(i=>`<span class="chip">⚠ ${esc(i)}</span>`).join("")||"<span style='color:#777'>No positive source marked</span>"}</div></td></tr>`).join("")||`<tr><td colspan="7" style="text-align:center;padding:35px;color:#777">No records match the current filters.</td></tr>`;
  pager("locPager",filtered.length,locSize,locPage,"setLocSize","setLocPage");
 }
+function formatSizeMm(v){
+  const s=String(v??"").trim();
+  if(!s) return "—";
+  if(/mm/i.test(s)) return s;
+  const dia=s.match(/^(\d+(?:\.\d+)?)\s*(?:dia|diameter)$/i);
+  if(dia) return `Ø${dia[1]} mm`;
+  const dims=s.match(/^(\d+(?:\.\d+)?)\s*[x×]\s*(\d+(?:\.\d+)?)$/i);
+  if(dims) return `${dims[1]} × ${dims[2]} mm`;
+  return `${s} mm`;
+}
 function renderEntries(){
  const key=Object.keys(DATA.entries||{}).find(k=>canon(k)===canon(currentDept)),all=key?DATA.entries[key]:[];
  const start=(entryPage-1)*entrySize,rows=all.slice(start,start+entrySize);
- $("entryBody").innerHTML=rows.map(x=>`<tr><td><span class="badge red">${esc(x.department)}</span></td><td>${esc(x.sr)}</td><td><b>${esc(x.id)}</b></td><td>${esc(x.description)}</td><td>${esc(x.area)}</td><td>${esc(x.location)}</td><td><span class="badge ${x.gha==="GHA"?"red":"green"}">${esc(x.gha)}</span></td><td>${esc(x.zone)||"—"}</td><td>${esc(x.size)||"—"}</td></tr>`).join("")||`<tr><td colspan="9" class="entry-empty">No entry records available for ${esc(currentDept)}.</td></tr>`;
+ $("entryBody").innerHTML=rows.map(x=>`<tr><td><span class="badge red">${esc(x.department)}</span></td><td>${esc(x.sr)}</td><td><b>${esc(x.id)}</b></td><td>${esc(x.description)}</td><td>${esc(x.area)}</td><td>${esc(x.location)}</td><td><span class="badge ${x.gha==="GHA"?"red":"green"}">${esc(x.gha)}</span></td><td>${esc(x.zone)||"—"}</td><td><span class="size-mm">${esc(formatSizeMm(x.size))}</span></td></tr>`).join("")||`<tr><td colspan="9" class="entry-empty">No entry records available for ${esc(currentDept)}.</td></tr>`;
  pager("entryPager",all.length,entrySize,entryPage,"setEntrySize","setEntryPage");
 }
 function renderCS(){
@@ -424,7 +486,7 @@ function documentButton(type,record,icon){
 function openCS(i){
  const x=DATA.locations[i];if(!x)return;
  $("modalTitle").textContent=`${x.id} — ${x.description}`;
- const details=[["Identification No.",x.id],["Description",x.description],["Area / Section",x.area||x.section],["Location",x.location],["Indoor / Outdoor",x.outdoor],["Large Space",x.large],["Restricted Entry",x.restricted],["Occupancy",x.occupancy],["Hazardous",x.hazardous],["Engulfment",x.engulf],["Converging Walls",x.converging],["Other Hazard",x.otherHazard],["GHA / NGHA",x.gha],["Zone",x.zone],["SOP",x.sop],["HIRAC",x.hirac]];
+ const details=[["Identification No.",x.id],["Description",x.description],["Area / Section",x.area||x.section],["Location",x.location],["Indoor / Outdoor",x.outdoor],["Large Space",x.large],["Restricted Entry",x.restricted],["Occupancy",x.occupancy],["Hazardous",x.hazardous],["Engulfment",x.engulf],["Converging Walls",x.converging],["Other Hazard",x.otherHazard],["GHA / NGHA",x.gha],["Zone",x.zone],["Size (mm)",formatSizeMm(x.size)],["SOP",x.sop],["HIRAC",x.hirac]];
  let ignition=(DATA.ignitionHeaders||[]).map(h=>`<div class="ignrow"><span>${esc(h)}</span><span class="${x.ignitionStatus?.[h]==="✓"?"yes":"no"}">${esc(x.ignitionStatus?.[h]||"—")}</span></div>`).join("");
  $("modalBody").innerHTML=`<div class="detailgrid">${details.map(d=>`<div class="detail"><b>${esc(d[0])}</b><span>${esc(d[1]||"—")}</span></div>`).join("")}</div><div class="doc-actions">${documentButton("SOP",x,"📘")}${documentButton("HIRAC",x,"🛡️")}<div class="doc-note">Configure the SOP / HIRAC file links in DOCUMENT_LINKS when the controlled files are added to the GitHub repository.</div></div><div class="ignition-box"><h4>Ignition Source — detailed sub-columns</h4>${ignition}<div style="margin-top:12px;font-weight:800;color:#9b151b">Identified / available sources: ${esc(x.availableSources||"—")}</div></div>`;
  $("modal").classList.add("show");
